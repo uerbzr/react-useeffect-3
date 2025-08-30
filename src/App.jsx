@@ -44,6 +44,8 @@ function App() {
             <td>Flight</td>
             <td>Mission Name</td>
             <td>Launch Date (UTC)</td>
+            <td>Details</td>
+            <td>Launch Site</td>
           </tr>
         </thead>
         <tbody>
@@ -55,6 +57,7 @@ function App() {
             src={launch.links.mission_patch}
             alt={`${launch.mission_name} patch`}
             style={{ width: '50px', height: '50px' }}
+            className="zoom-image"
           />
         ) : (
           'No patch'
@@ -63,6 +66,8 @@ function App() {
               <td>{launch.flight_number}</td>
               <td>{launch.mission_name}</td>
               <td>{launch.launch_date_utc}</td>
+              <td>{launch.details}</td>
+               <td>{launch.launch_site.site_name_long}</td>
 
             </tr>
           ))}
